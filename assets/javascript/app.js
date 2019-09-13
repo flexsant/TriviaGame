@@ -15,7 +15,7 @@ var questions = [
   {
     question: "What is the name of the highest mountain peak in California?",
     answers: ["Mt. Tam", "Mt. Whitney", "Mt. Russell", "Mt. Diablo"],
-    correctAnswer: "My Whitney"
+    correctAnswer: "Mt. Whitney"
   },
   {
     question: "How many miles of coastline are within the state of California?",
@@ -30,13 +30,16 @@ var questions = [
 ];
 
 // Ticker clock set at 10 seconds to speed up bugging purposes
-var number = 10;
+var number = 30;
 // Var holding intervalId for running the function run.
 var intervalId;
 //variable to keep track of correct
 var correct = 0;
 //variable to keep track of incorrect
 var incorrect = 0;
+
+var userAnswers = $("#questions").children("input:checked");
+
 
 function displayQuestions() {
   console.log(questions);
@@ -81,15 +84,16 @@ function decrement() {
 
 function stop() {
   clearInterval(intervalId);
+  console.log(userAnswers);
 }
 
 //function to check all of the answers
 
-//store all the user's answers in a variable that will end up being an array of anwers
-var userAnswers = $("#questions").children("input:checked");
+//store all the user's answers in a variable that will end up being an array of answers
+
 //for loop through the answer array and compare them to the correct answer
 
-//if else statement that if the userAnswer[i] === quetion[i].correctAnswer
+//if else statement that if the userAnswer[i] === question[i].correctAnswer
 
 //if true then we will increase the correct count
 
@@ -97,7 +101,7 @@ var userAnswers = $("#questions").children("input:checked");
 
 //Show user the results invoke the show result function
 
-// function to show the reults to the user
+//function to show the reults to the user
 
 //empty the questions from the questions div
 
