@@ -30,7 +30,7 @@ var questions = [
 ];
 
 // Ticker clock set at 10 seconds to speed up bugging purposes
-var number = 30;
+var number = 10;
 // Var holding intervalId for running the function run.
 var intervalId;
 //variable to keep track of correct
@@ -85,6 +85,11 @@ function decrement() {
 function stop() {
   clearInterval(intervalId);
   console.log(userAnswers);
+  var userAnswers = $("#questions").children("input:checked");
+  for (var i = 0; i < userAnswers.length; i++) {
+    console.log(userAnswers[i].value);
+    console.log(questions[i].correctAnswer);
+  }
 }
 
 //function to check all of the answers
