@@ -112,11 +112,6 @@ $(document).ready(function () {
     $("#results").append("<h3>" + "Incorrect Answers: " + incorrect + "<h3>");
   }
 
-  //store all the user's answers in a variable that will end up being an array of answers
-
-
-
-  //if else statement that if the userAnswer[i] === question[i].correctAnswer
 })
 
 
